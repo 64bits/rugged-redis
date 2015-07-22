@@ -55,7 +55,7 @@ puts "Found rugged at #{RUGGED_EXT_DIR}"
 LIBGIT2_DIR = File.join(rugged_root, 'vendor', 'libgit2')
 
 # Build hiredis
-
+puts "Looking for hiredis in #{ROOT_DIR}/vendor"
 HIREDIS_DIR = File.join(ROOT_DIR, 'vendor') # because hiredis headers are included as hiredis/hiredis.h
 unless File.directory?(File.join(HIREDIS_DIR, 'hiredis'))
   STDERR.puts "vendor/hiredis missing, please checkout its submodule..."
